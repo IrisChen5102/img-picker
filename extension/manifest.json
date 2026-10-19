@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "图集助手",
+  "version": "1.0.0",
+  "description": "一键提取电商详情页图片，支持单张下载与批量打包 zip 下载",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": [
+    "*://*.taobao.com/*",
+    "*://*.tmall.com/*",
+    "*://*.jd.com/*",
+    "*://*.pinduoduo.com/*",
+    "*://*.yangkeduo.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.taobao.com/*",
+        "*://*.tmall.com/*",
+        "*://*.jd.com/*",
+        "*://*.pinduoduo.com/*",
+        "*://*.yangkeduo.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["viewer.html", "viewer.js", "jszip.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

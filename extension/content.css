@@ -1,0 +1,26 @@
+#img-picker-fetch-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 90px;
+  z-index: 2147483647;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #ff6a00;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 106, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+#img-picker-fetch-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 106, 0, 0.45);
+}
+
+#img-picker-fetch-btn:active {
+  transform: translateY(0);
+}
